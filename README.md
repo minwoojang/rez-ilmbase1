@@ -1,3 +1,4 @@
-# rez-ilmbase
+rez-ilmbase
+===
 
 Rez build configuration for IlmBase.
