@@ -6,13 +6,13 @@ include(ExternalProject)
 
 # IlmBase
 rez_set_archive(
-    ILMBASE_URL ilmbase/ilmbase-${REZ_BUILD_PROJECT_VERSION}.tar.gz
-    https://download-mirror.savannah.gnu.org/releases/openexr/ilmbase-2.2.1.tar.gz
+    ILMBASE_URL openexr/openexr-${REZ_BUILD_PROJECT_VERSION}.tar.gz
+    https://github.com/openexr/openexr/archive/v${REZ_BUILD_PROJECT_VERSION}.tar.gz
 )
 
 # The environment variable REZ_TMP_PATH is meant to point to a location such as "/tmp/rez".
 set(EXTRACT_DIR $ENV{REZ_TMP_PATH}/ilmbase/${REZ_BUILD_PROJECT_VERSION})
-set(BUILD_DIR ${EXTRACT_DIR}/build)
+set(BUILD_DIR ${EXTRACT_DIR}/IlmBase/build)
 
 # We configure/build/install IlmBase through the ExternalProject_Add macro,
 # using three different shell scripts for each of these steps.

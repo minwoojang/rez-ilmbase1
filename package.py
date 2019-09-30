@@ -20,10 +20,6 @@ variants = [
     ["platform-linux"]
 ]
 
-tools = [
-    "ilmbase"
-]
-
 build_system = "cmake"
 
 with scope("config") as config:

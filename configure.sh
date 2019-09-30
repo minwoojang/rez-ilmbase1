@@ -31,7 +31,7 @@ else
     mkdir -p ${BUILD_PATH}
     cd ${BUILD_PATH}
 
-    cmake ${EXTRACT_PATH} -DCMAKE_INSTALL_PREFIX=${INSTALL_PATH}
+    cmake ${BUILD_PATH}/.. -DCMAKE_INSTALL_PREFIX=${INSTALL_PATH} -DCMAKE_C_FLAGS=-fPIC -DCMAKE_CXX_FLAGS=-fPIC
 fi
 
 echo -e "\n"
