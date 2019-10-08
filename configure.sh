@@ -35,14 +35,14 @@ echo -e "\n"
 echo -e "[CONFIGURE] Running the configuration script from IlmBase-${ILMBASE_VERSION}..."
 echo -e "\n"
 
-mkdir -p ${BUILD_PATH}
 cd ${BUILD_PATH}
 
-cmake \
-    ${BUILD_PATH}/.. \
-    -DCMAKE_INSTALL_PREFIX=${INSTALL_PATH} \
-    -DCMAKE_C_FLAGS=-fPIC \
-    -DCMAKE_CXX_FLAGS=-fPIC
+${BUILD_PATH}/bootstrap
+${BUILD_PATH}/configure \
+    --prefix=${INSTALL_PATH} \
+    --with-pic \
+    CFLAGS=-fPIC \
+    CXXFLAGS=-fPIC
 
 echo -e "\n"
 echo -e "[CONFIGURE] Finished configuring IlmBase-${ILMBASE_VERSION}!"
