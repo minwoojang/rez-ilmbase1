@@ -38,11 +38,12 @@ echo -e "\n"
 cd ${BUILD_PATH}
 
 ${BUILD_PATH}/bootstrap
+
 ${BUILD_PATH}/configure \
     --prefix=${INSTALL_PATH} \
-    --with-pic \
-    CFLAGS=-fPIC \
-    CXXFLAGS=-fPIC
+    CFLAGS="-fPIC" \
+    CXXFLAGS="-fPIC" \
+    --with-pic
 
 echo -e "\n"
 echo -e "[CONFIGURE] Finished configuring IlmBase-${ILMBASE_VERSION}!"
