@@ -1,6 +1,6 @@
 name = "ilmbase"
 
-version = "2.2.1"
+version = "2.3.0"
 
 authors = [
     "Industrial Light & Magic"
@@ -13,12 +13,11 @@ description = \
 
 requires = [
     "cmake-3+",
-    "gcc-6+"
+    "gcc-11"
 ]
 
-variants = [
-    ["platform-linux"]
-]
+
+variants = [['platform-linux', 'arch-x86_64']]
 
 build_system = "cmake"
 

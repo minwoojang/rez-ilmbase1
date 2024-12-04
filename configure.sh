@@ -42,8 +42,9 @@ ${BUILD_PATH}/bootstrap
 ${BUILD_PATH}/configure \
     --prefix=${INSTALL_PATH} \
     CFLAGS="-fPIC" \
-    CXXFLAGS="-fPIC" \
-    --with-pic
+    CXXFLAGS="-fPIC -std=c++14" \
+    --with-pic \
+    
 
 echo -e "\n"
 echo -e "[CONFIGURE] Finished configuring IlmBase-${ILMBASE_VERSION}!"
